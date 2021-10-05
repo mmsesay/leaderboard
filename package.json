@@ -1,0 +1,36 @@
+{
+  "name": "leaderboard",
+  "version": "1.0.0",
+  "description": "The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external [Leaderboard API service.",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmsesay/leaderboard.git"
+  },
+  "keywords": [],
+  "author": "Muhammad Mustapha Sesay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmsesay/leaderboard/issues"
+  },
+  "homepage": "https://github.com/mmsesay/leaderboard#readme",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
+    "babel-eslint": "^10.1.0",
+    "babel-register": "^6.26.0",
+    "css-loader": "^6.3.0",
+    "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.2.3",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
