@@ -168,4 +168,5 @@ table tr:nth-child(even) {
   padding: 2%;
   border-radius: 5px;
   border: 1px solid rgb(6, 185, 6);
+  display: none;
 }

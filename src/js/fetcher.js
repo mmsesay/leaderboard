@@ -3,6 +3,7 @@ import axios from 'axios';
 class Fetcher {
   constructor() {
     this.baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+    this.messageBox = document.querySelector('.message-text');
     this.gameId = JSON.parse(localStorage.getItem('gameId') || null);
     this.createGame('Space Shooter');
   }
@@ -31,13 +32,20 @@ class Fetcher {
     })
       .then((response) => {
         const { result } = response.data;
-        console.log(result);
+        this.showAndHideMessageBox(result);
       }).catch((error) => {
-        console.log(error);
-        // throw new Error(error);
+        throw new Error(error);
       });
   }
+
+  showAndHideMessageBox = (message) => {
+    this.messageBox.innerHTML = message;
+    this.messageBox.style.display = 'block';
+    setTimeout(() => {
+      this.messageBox.innerHTML = '';
+      this.messageBox.style.display = 'none';
+    }, 5000);
+  };
 }
 
 export const fetcher = new Fetcher();
-// fetcher.createGame('dxh');
