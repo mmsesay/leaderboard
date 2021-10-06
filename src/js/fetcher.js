@@ -3,14 +3,14 @@ import { renderScores, showMessageBox } from './renderer.js';
 
 class Fetcher {
   constructor() {
-    this.baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+    this.baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
     this.gameId = JSON.parse(localStorage.getItem('gameId') || null);
     this.createGame('Space Shooter');
   }
 
   createGame = async (gameName) => {
     if (this.gameId === null) {
-      await axios.post(`${this.baseURL}games/`, {
+      await axios.post(`${this.baseURL}`, {
         name: gameName,
       })
         .then((response) => {
@@ -26,7 +26,7 @@ class Fetcher {
   }
 
   createGameScore = async (objectName, objectScore) => {
-    await axios.post(`${this.baseURL}games/${this.gameId}/scores/`, {
+    await axios.post(`${this.baseURL}${this.gameId}/scores/`, {
       user: objectName,
       score: objectScore,
     })
@@ -39,7 +39,7 @@ class Fetcher {
   }
 
   getGameScores = async () => {
-    await axios.get(`${this.baseURL}games/${this.gameId}/scores/`)
+    await axios.get(`${this.baseURL}${this.gameId}/scores/`)
       .then((response) => {
         const { result } = response.data;
         renderScores(result);

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import '../styles/style.css';
 import { fetcher } from './fetcher.js';
-import { showMessageBox } from './renderer.js';
+import { showMessageBox, resetInputFields } from './renderer.js';
 
 window.onload = () => {
   const submitButton = document.querySelector('.submit-button');
@@ -9,12 +9,6 @@ window.onload = () => {
   const scoreField = document.querySelector('.score-field');
   const refreshButton = document.querySelector('.refresh-button');
   const scoreBoard = document.querySelector('.score-board');
-
-  const resetInputFields = (args) => {
-    args.forEach((element) => {
-      element.value = '';
-    });
-  };
 
   submitButton.addEventListener('click', (e) => {
     e.preventDefault();

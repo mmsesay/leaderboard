@@ -33,3 +33,9 @@ export const showMessageBox = (message, type) => {
     }
   }
 };
+
+export const resetInputFields = (args) => {
+  args.forEach((element) => {
+    element.value = '';
+  });
+};
