@@ -115,7 +115,7 @@ main {
 .container {
   margin: 8% 20%;
   padding: 30px;
-  height: 40%;
+  height: 50%;
   overflow: hidden;
 }
 
@@ -141,12 +141,14 @@ input {
   outline: none;
 }
 
-table {
+.score-board {
   border: 1px solid black;
+  height: 400px;
+  overflow-y: scroll;
 }
 
-table tr:nth-child(even) {
-  background-color: rgb(223, 223, 223);
+.score:nth-child(even) {
+  background-color: rgb(223, 223, 223) !important;
 }
 
 .button-container {

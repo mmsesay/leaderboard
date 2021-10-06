@@ -4,6 +4,7 @@ class Fetcher {
   constructor() {
     this.baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
     this.messageBox = document.querySelector('.message-text');
+    this.scoreBoard = document.querySelector('.score-board');
     this.gameId = JSON.parse(localStorage.getItem('gameId') || null);
     this.createGame('Space Shooter');
   }
@@ -23,7 +24,7 @@ class Fetcher {
         });
     }
     return this.gameId;
-  };
+  }
 
   createGameScore = async (objectName, objectScore) => {
     await axios.post(`${this.baseURL}games/${this.gameId}/scores/`, {
@@ -38,6 +39,16 @@ class Fetcher {
       });
   }
 
+  getGameScores = async () => {
+    await axios.get(`${this.baseURL}games/${this.gameId}/scores/`)
+      .then((response) => {
+        const { result } = response.data;
+        this.renderScores(result);
+      }).catch((error) => {
+        throw new Error(error);
+      });
+  }
+
   showAndHideMessageBox = (message) => {
     this.messageBox.innerHTML = message;
     this.messageBox.style.display = 'block';
@@ -46,6 +57,12 @@ class Fetcher {
       this.messageBox.style.display = 'none';
     }, 5000);
   };
+
+  renderScores = (scores) => {
+    scores.forEach((score) => {
+      this.scoreBoard.innerHTML += `<div class="p-5 score">${score.user} : ${score.score}</div>`;
+    });
+  }
 }
 
 export const fetcher = new Fetcher();
