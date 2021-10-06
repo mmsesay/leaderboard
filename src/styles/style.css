@@ -160,3 +160,12 @@ table tr:nth-child(even) {
   margin-left: 50px;
   background-color: antiquewhite;
 }
+
+.message-text {
+  background-color: rgb(198, 248, 198);
+  color: rgb(5, 107, 5);
+  margin: 3% 15% 0 15%;
+  padding: 2%;
+  border-radius: 5px;
+  border: 1px solid rgb(6, 185, 6);
+}
