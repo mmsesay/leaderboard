@@ -17,27 +17,20 @@
         <div class="scores-panel w-500 h-500">
           <div class="scores-panel-top flex space-between">
             <h2>Recent scores</h2>
-            <button class="button">Refresh</button>
+            <button class="button refresh-button cursor-pointer">Refresh</button>
           </div>
           <div class="scores-panel-bottom">
-            <table class="w-full mt-15">
-              <tr><td class="p-5">Name: 100</td></tr>
-              <tr><td class="p-5">Name: 20</td></tr>
-              <tr><td class="p-5">Name: 50</td></tr>
-              <tr><td class="p-5">Name: 78</td></tr>
-              <tr><td class="p-5">Name: 125</td></tr>
-              <tr><td class="p-5">Name: 77</td></tr>
-              <tr><td class="p-5">Name: 42</td></tr>
-            </table>
+            <div class="w-full mt-15 score-board"></div>
           </div>
         </div>
         <div class="form-panel w-500 h-500">
           <h2 class="text-center">Add your score</h2>
-          <form action="#" class="flex items-center flex-col">
-            <input type="text" placeholder="Your name" class="mt-15 p-5">
-            <input type="text" placeholder="Your score" class="mt-15 p-5">
+          <p class="text-center message-box error-message"></p>
+          <form class="flex items-center flex-col" method="POST">
+            <input type="text" name="name" placeholder="Your name" class="mt-15 p-5 name-field">
+            <input type="text" name="score" placeholder="Your score" class="mt-15 p-5 score-field">
             <div class="button-container w-full mt-15 flex justify-end">
-              <button class="button">Submit</button>
+              <button class="button submit-button cursor-pointer">Submit</button>
             </div>
           </form>
         </div>
