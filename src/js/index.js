@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import '../styles/style.css';
 import { fetcher } from './fetcher.js';
+import { showMessageBox, resetInputFields } from './renderer.js';
 
 window.onload = () => {
   const submitButton = document.querySelector('.submit-button');
@@ -8,12 +9,6 @@ window.onload = () => {
   const scoreField = document.querySelector('.score-field');
   const refreshButton = document.querySelector('.refresh-button');
   const scoreBoard = document.querySelector('.score-board');
-
-  const resetInputFields = (args) => {
-    args.forEach((element) => {
-      element.value = '';
-    });
-  };
 
   submitButton.addEventListener('click', (e) => {
     e.preventDefault();
@@ -25,10 +20,10 @@ window.onload = () => {
         fetcher.createGameScore(nameField.value, scoreField.value);
         resetInputFields([nameField, scoreField]);
       } else {
-        fetcher.showMessageBox('Your name must be a string and you score field must be a number', 'error');
+        showMessageBox('Your name must be a string and you score field must be a number', 'error');
       }
     } else {
-      fetcher.showMessageBox('Your name and your score are required', 'error');
+      showMessageBox('Your name and your score are required', 'error');
     }
   });
 
