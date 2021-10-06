@@ -115,7 +115,7 @@ main {
 .container {
   margin: 8% 20%;
   padding: 30px;
-  height: 40%;
+  height: 50%;
   overflow: hidden;
 }
 
@@ -141,12 +141,14 @@ input {
   outline: none;
 }
 
-table {
+.score-board {
   border: 1px solid black;
+  height: 400px;
+  overflow-y: scroll;
 }
 
-table tr:nth-child(even) {
-  background-color: rgb(223, 223, 223);
+.score:nth-child(even) {
+  background-color: rgb(223, 223, 223) !important;
 }
 
 .button-container {
@@ -159,4 +161,23 @@ table tr:nth-child(even) {
   width: 70px;
   margin-left: 50px;
   background-color: antiquewhite;
+}
+
+.message-box {
+  margin: 3% 15% 0 15%;
+  padding: 2%;
+  border-radius: 5px;
+  display: none;
+}
+
+.success-message {
+  background-color: rgb(198, 248, 198);
+  color: rgb(5, 107, 5);
+  border: 1px solid rgb(6, 185, 6);
+}
+
+.error-message {
+  background-color: rgb(255, 198, 198);
+  color: rgb(156, 49, 30);
+  border: 1px solid rgb(156, 49, 30);
 }
