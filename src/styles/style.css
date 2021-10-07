@@ -4,11 +4,10 @@
 }
 
 main {
-  background-image: url('../assets/background.jpg');
+  background-image: url('../assets/images/background.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Roboto', sans-serif;
   font-size: 18px;
 }
 
@@ -53,12 +52,12 @@ main {
   color: #fff;
 }
 
-.font-roboto {
-  font-family: 'Roboto', sans-serif;
+.font-crete {
+  font-family: 'Crete Round', sans-serif;
 }
 
-.title {
-  font-size: 22px;
+.font-alfa {
+  font-family: 'Alfa Slab One', sans-serif;
 }
 
 .scores-panel-bottom {
@@ -119,6 +118,10 @@ main {
 @media (min-width: 768px) {
   ::-webkit-scrollbar {
     width: 8px;
+  }
+
+  .title {
+    margin-left: -34%;
   }
 
   .score-board {

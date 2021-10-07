@@ -11,13 +11,13 @@ export const renderScores = (scores) => {
     // max = Math.max(object.score);
     winner = object.user;
     scoreBoard.innerHTML += `
-    <div class="flex items-center justify-center p-2 m-4 rounded-lg bg-white md:mx-32">
-      <div class="w-1/2 text-sm md:text-xl font-bold">${object.user.toUpperCase()}</div>
-      <div class="w-20 score flex items-center justify-center space-x-2 text-center rounded-full">
-        <p class="text-sm md:text-lg font-bold">${object.score}</p>
-        <img src="./assets/star.svg" alt="star icon" class="w-5">
-      </div>
-    </div>`;
+      <div class="flex items-center justify-center p-2 m-4 rounded-lg bg-white md:mx-32">
+        <div class="w-1/2 text-sm md:text-xl font-alfa color-dark">${object.user.toUpperCase()}</div>
+        <div class="w-20 score flex items-center justify-center space-x-2 text-center rounded-full">
+          <p class="text-sm md:text-lg font-alfa color-dark">${object.score}</p>
+          <img src="./assets/images/star.svg" alt="star icon" class="w-5">
+        </div>
+      </div>`;
   });
 
   winnerPara.innerHTML = `${winner}`;
