@@ -42,6 +42,8 @@ Give a ⭐️ if you like this project!
 - microverseinc for the readme template
 - [Leaderboard API service.](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3)
 - [Frame vector created by pch.vector](https://www.freepik.com/vectors/frame)
+- [Rodion Kutsaiev](https://www.pexels.com/photo/yellow-and-white-3-d-cube-9436715/) Pexels.com
+<a href='https://www.freepik.com/vectors/abstract'>Abstract vector created by freepik - www.freepik.com</a>
 
 ## 📝 License
 

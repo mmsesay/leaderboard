@@ -7,39 +7,55 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
   <title>Leaderboard</title>
 </head>
 <body>
-  <main>
-    <div class="container flex flex-col items-center justify-center">
-      <h1 class="title text-center text-lg text-white">Leaderboard</h1>
-      <div class="sub-container flex flex-col items-center justify-center">
-        <div class="scores-panel">
-          <div class="scores-panel-top flex space-between">
-            <h2 class="text-md text-white">Recent scores</h2>
-            <button class="button refresh-button cursor-pointer text-white">Refresh</button>
-          </div>
-          <div class="scores-panel-bottom">
-            <div class="w-full mt-15 score-board"></div>
+  <main class="flex flex-col items-center justify-center md:h-screen">
+    <h1 class="title text-center text-lg md:text-5xl mt-14 md:mt-0 md:mb-10 font-bold color-dark">Leaderboard</h1>
+    <div class="flex flex-col md:flex-row items-center justify-center mt-14 md:mt-5 w-full md:w-1/2 h-auto md:h-auto md:space-x-10 px-10 md:px-0">
+      <div class="scores-panel w-full md:w-3/5">
+        <div class="scores-panel-top flex">
+          <h2 class="w-1/2 text-lg md:text-2xl font-bold color-dark">Recent scores</h2>
+          <div class="w-1/2 flex justify-end">
+            <button class="button refresh-button cursor-pointer text-white shadow-2xl cursor-pointer">Refresh</button>
           </div>
         </div>
-        <div class="form-panel">
-          <h2 class="text-center text-lg text-white">Add your score</h2>
-          <p class="text-center message-box"></p>
-          <form class="flex items-center flex-col" method="POST">
-            <input type="text" name="name" placeholder="Your name" class="mt-15 p-5 name-field">
-            <input type="text" name="score" placeholder="Your score" class="mt-15 p-5 score-field">
-            <div class="button-container w-full mt-15 flex justify-end">
-              <button class="button submit-button cursor-pointer text-white">Submit</button>
+        <div class="scores-panel-bottom flex flex-col md:mt-10">
+          <div class="icons flex items-center justify-center 
+                      mt-5 h-32 md:h-40 w-full rounded-tl-lg rounded-tr-lg primary-color shadow-2xl">
+            <div class="w-1/2 flex justify-center relative">
+              <img src="./assets/user.svg" alt="user icon" class="w-3/4 md:w-40">
+              <div class="mt-20 md:mt-32 w-full">
+                <p class="absolute text-xs md:text-lg text-center text-white winner-name"></p>
+              </div>
             </div>
-          </form>
+            <div class="w-1/2 flex justify-center"><img src="./assets/number.svg" alt="number icon" class="w-20 md:w-28"></div>
+            <div class="absolute -mt-32 md:-mt-40">
+              <img src="./assets/crown.svg" alt="crown icon" class="w-14 md:w-20">
+            </div>
+          </div>
+          <div class="w-full mt-48 score-board rounded-bl-lg rounded-br-lg primary-color shadow-2xl">
+            <div class="flex items-center justify-center p-2 m-4 rounded-lg bg-white md:mx-32">
+              <div class="w-1/2 text-sm md:text-xl font-bold">TOM</div>
+              <div class="w-20 score flex items-center justify-center space-x-2 text-center rounded-full">
+                <p class="text-sm md:text-lg font-bold">13</p>
+                <img src="./assets/star.svg" alt="star icon" class="w-5">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="shapes">
-        <img src="./assets/title-bar.svg" class="title-bar-shape" alt="title bar shape">
-        <!-- <img src="../assets/title-bar.svg" alt="title bar shape">
-        <img src="../assets/title-bar.svg" alt="title bar shape"> -->
+      <div class="form-panel w-full md:w-2/5 mb-12 md:mb-0 md:-mt-52 primary-color rounded-lg">
+        <form class="flex items-center flex-col px-5 md:px-12 py-5" method="POST">
+          <h2 class="text-center text-lg md:text-2xl font-bold color-dark">Add your score</h2>
+          <p class="text-center message-box"></p>
+          <input type="text" name="name" placeholder="Your name" class="mt-5 p-2 w-full rounded-md name-field">
+          <input type="text" name="score" placeholder="Your score" class="mt-5 p-2 w-full rounded-md score-field">
+          <div class="button-container w-full mt-5 flex justify-end">
+            <button class="button submit-button cursor-pointer text-white shadow-lg cursor-pointer">Submit</button>
+          </div>
+        </form>
       </div>
     </div>
   </main>
