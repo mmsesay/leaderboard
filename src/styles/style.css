@@ -4,10 +4,10 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: #000;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 main {
@@ -37,6 +37,10 @@ main {
 
 .bg-white {
   background-color: #fff;
+}
+
+.text-white {
+  color: #fff;
 }
 
 .cursor-pointer {
@@ -75,6 +79,10 @@ main {
   font-size: 18px;
 }
 
+.text-lg {
+  font-size: 20px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -109,14 +117,15 @@ main {
 }
 
 .title {
-  margin-left: 9%;
+  /* margin-left: 11%; */
+  font-size: 22px;
 }
 
 .container {
-  margin: 8% 20%;
+  /* margin: 8% 20%; */
   padding: 30px;
-  height: 50%;
-  overflow: hidden;
+  /* height: 50%; */
+  overflow-y: scroll;
 }
 
 .scores-panel {
@@ -124,7 +133,7 @@ main {
 }
 
 .scores-panel-top {
-  margin-bottom: 8px;
+  margin-bottom: 3px;
 }
 
 .form-panel {
@@ -132,7 +141,7 @@ main {
 }
 
 form {
-  padding: 0 16%;
+  /* padding: 0 16%; */
 }
 
 input {
@@ -143,7 +152,7 @@ input {
 
 .score-board {
   border: 1px solid black;
-  height: 400px;
+  height: 300px;
   overflow-y: scroll;
 }
 
@@ -157,10 +166,12 @@ input {
 }
 
 .button {
-  height: 30px;
+  height: 25px;
   width: 70px;
   margin-left: 50px;
-  background-color: antiquewhite;
+  background-color: #7f5cff;
+  border: none;
+  border-radius: 5px;
 }
 
 .message-box {
@@ -180,4 +191,18 @@ input {
   background-color: rgb(255, 198, 198);
   color: rgb(156, 49, 30);
   border: 1px solid rgb(156, 49, 30);
+}
+
+/* shapes */
+.shapes {
+  /* position: relative; */
+  background: red;
+  height: 50%;
+}
+
+.title-bar-shape {
+  position: absolute;
+  height: 8.4%;
+  top: 2.8%;
+  left: 23%;
 }

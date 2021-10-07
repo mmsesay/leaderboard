@@ -8,24 +8,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <title>Leaderboard</title>
-<script defer src="bundel.js"></script></head>
+<script defer src="/dist/bundel.js"></script></head>
 <body>
   <main>
-    <div class="container">
-      <h1 class="title">Leaderboard</h1>
-      <div class="sub-container flex items-center justify-center">
-        <div class="scores-panel w-500 h-500">
+    <div class="container flex flex-col items-center justify-center">
+      <h1 class="title text-center text-lg">Leaderboard</h1>
+      <div class="sub-container flex flex-col items-center justify-center">
+        <div class="scores-panel">
           <div class="scores-panel-top flex space-between">
-            <h2>Recent scores</h2>
+            <h2 class="text-md">Recent scores</h2>
             <button class="button refresh-button cursor-pointer">Refresh</button>
           </div>
           <div class="scores-panel-bottom">
             <div class="w-full mt-15 score-board"></div>
           </div>
         </div>
-        <div class="form-panel w-500 h-500">
-          <h2 class="text-center">Add your score</h2>
-          <p class="text-center message-box error-message"></p>
+        <div class="form-panel">
+          <h2 class="text-center text-lg">Add your score</h2>
+          <p class="text-center message-box"></p>
           <form class="flex items-center flex-col" method="POST">
             <input type="text" name="name" placeholder="Your name" class="mt-15 p-5 name-field">
             <input type="text" name="score" placeholder="Your score" class="mt-15 p-5 score-field">
@@ -35,8 +35,13 @@
           </form>
         </div>
       </div>
+
+      <div class="shapes">
+        <img src="/dist/title-bar.svg" class="title-bar-shape" alt="title bar shape">
+        <!-- <img src="../assets/title-bar.svg" alt="title bar shape">
+        <img src="../assets/title-bar.svg" alt="title bar shape"> -->
+      </div>
     </div>
   </main>
-  <script src="../dist/bundle.js"></script>
 </body>
 </html>
