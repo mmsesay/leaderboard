@@ -1,13 +1,8 @@
 import _ from 'lodash';
 
-const messageBox = document.querySelector('.message-box');
+import starIcon from '../assets/images/star.svg';
 
-export const renderScores = (scores) => {
-  const scoreBoard = document.querySelector('.score-board');
-  scores.forEach((score) => {
-    scoreBoard.innerHTML += `<div class="p-5 score">${score.user} : ${score.score}</div>`;
-  });
-};
+const messageBox = document.querySelector('.message-box');
 
 export const hideMessageBox = () => {
   setTimeout(() => {
@@ -32,6 +27,42 @@ export const showMessageBox = (message, type) => {
       hideMessageBox();
     }
   }
+};
+
+export const toggleEementVisibility = (elem1, elem2, message = null, messageType = null) => {
+  setTimeout(() => {
+    elem1.classList.remove('show');
+    elem2.classList.remove('hide');
+    showMessageBox(message, messageType);
+  }, 300);
+};
+
+export const renderScores = (scores) => {
+  const scoreBoard = document.querySelector('.score-board');
+  const winnerPara = document.querySelector('.winner-name');
+  const refreshButton = document.querySelector('.refresh-button');
+  const text = refreshButton.childNodes[1];
+  const spinner = refreshButton.childNodes[3].childNodes[1];
+
+  scores.forEach((object) => {
+    const maxScore = Math.max(...scores.map((object) => object.score));
+    const convertedScore = parseInt(object.score, 10);
+
+    if (convertedScore === maxScore) {
+      winnerPara.innerHTML = object.user;
+    }
+
+    scoreBoard.innerHTML += `
+      <div class="flex items-center justify-center p-2 m-4 rounded-lg bg-white md:mx-10 lg:mx-40">
+        <div class="w-1/2 text-sm md:text-xl font-alfa color-dark">${object.user.toUpperCase()}</div>
+        <div class="w-20 score flex items-center justify-center space-x-2 text-center rounded-full">
+          <p class="text-sm md:text-lg font-alfa color-dark">${object.score}</p>
+          <img src="${starIcon}" alt="star icon" class="w-5">
+        </div>
+      </div>`;
+  });
+
+  toggleEementVisibility(spinner, text);
 };
 
 export const resetInputFields = (args) => {

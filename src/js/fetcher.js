@@ -19,6 +19,7 @@ class Fetcher {
           localStorage.setItem('gameId', JSON.stringify(this.gameId));
         })
         .catch((error) => {
+          this.isResponseCompleted = false;
           throw new Error(error);
         });
     }

@@ -6,37 +6,63 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
   <title>Leaderboard</title>
 <script defer src="bundel.js"></script></head>
 <body>
-  <main>
-    <div class="container">
-      <h1 class="title">Leaderboard</h1>
-      <div class="sub-container flex items-center justify-center">
-        <div class="scores-panel w-500 h-500">
-          <div class="scores-panel-top flex space-between">
-            <h2>Recent scores</h2>
-            <button class="button refresh-button cursor-pointer">Refresh</button>
-          </div>
-          <div class="scores-panel-bottom">
-            <div class="w-full mt-15 score-board"></div>
-          </div>
-        </div>
-        <div class="form-panel w-500 h-500">
-          <h2 class="text-center">Add your score</h2>
-          <p class="text-center message-box error-message"></p>
-          <form class="flex items-center flex-col" method="POST">
-            <input type="text" name="name" placeholder="Your name" class="mt-15 p-5 name-field">
-            <input type="text" name="score" placeholder="Your score" class="mt-15 p-5 score-field">
-            <div class="button-container w-full mt-15 flex justify-end">
-              <button class="button submit-button cursor-pointer">Submit</button>
+  <main class="flex flex-col items-center justify-center md:h-screen">
+    <h1 class="title md:text-center lg:text-left text-3xl md:text-5xl mt-14 md:mt-0 md:mb-10 font-bold color-dark font-alfa">Leaderboard</h1>
+    <div class="flex flex-col md:flex-row items-center justify-center mt-14 md:mt-5 w-full md:px-10 lg:px-96 h-auto md:h-auto md:space-x-10 px-10 md:px-0">
+      <div class="scores-panel w-full md:w-3/5 lg:w-3/5">
+        <div class="scores-panel-top flex">
+          <div class="w-1/2 text-xl md:text-2xl font-bold color-dark font-crete">Recent scores</div>
+          <div class="w-1/2 flex justify-end">
+            <div class="button refresh-button cursor-pointer text-white shadow-2xl cursor-pointer font-crete">
+              <p class="text-center refresh-button-text md:mt-1">Refresh</p>
+              <div class="mt-1 md:mt-2">
+                <img src="assets/images/spinner.svg" alt="spinner" class="w-5 h-5 mx-auto hide">
+              </div>
             </div>
-          </form>
+          </div>
         </div>
+        <div class="scores-panel-bottom flex flex-col md:mt-10">
+          <div class="icons flex items-center justify-center
+                      mt-5 h-32 md:h-40 w-full rounded-tl-lg rounded-tr-lg primary-color shadow-2xl">
+            <div class="w-1/2 flex justify-center h-32">
+              <img src="assets/images/user.svg" alt="user icon" class="w-3/4 md:w-40">
+              <div class="flex justify-center w-48 relative">
+                <p class="absolute text-xs md:text-lg text-center font-crete text-white winner-name"></p>
+              </div>
+            </div>
+            <div class="w-1/2 flex justify-center">
+              <img src="assets/images/number.svg" alt="number icon" class="w-20 md:w-28">
+            </div>
+            <div class="absolute -mt-32 md:-mt-40">
+              <img src="assets/images/crown.svg" alt="crown icon" class="w-14 md:w-20">
+            </div>
+          </div>
+          <div class="w-full mt-48 score-board rounded-bl-lg rounded-br-lg primary-color shadow-2xl"></div>
+        </div>
+      </div>
+      <div class="form-panel w-full md:w-2/5 lg:w-2/5 mb-12 md:mb-0 md:max-h-96 lg:max-h-96 md:-mt-32 lg:-mt-32 primary-color rounded-lg shadow-2xl">
+        <form class="flex items-center flex-col px-5 md:px-5 lg:px-12 py-5" method="POST">
+          <h2 class="text-center text-xl md:text-2xl color-dark font-bold font-crete">Add your score</h2>
+          <p class="text-center message-box"></p>
+          <input type="text" name="name" placeholder="Your name" class="mt-5 p-2 w-full rounded-md font-crete name-field">
+          <input type="text" name="score" placeholder="Your score" class="mt-5 p-2 w-full rounded-md font-crete score-field">
+          <div class="button-container w-full mt-5 flex justify-end">
+            <div class="button submit-button cursor-pointer text-white shadow-lg cursor-pointer font-crete">
+              <p class="text-center submit-button-text md:mt-1">Submit</p>
+              <div class="mt-1 md:mt-2">
+                <img src="assets/images/spinner.svg" alt="spinner" class="w-5 h-5 mx-auto hide">
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </main>
-  <script src="../dist/bundle.js"></script>
 </body>
 </html>
