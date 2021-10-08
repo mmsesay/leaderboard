@@ -1,5 +1,7 @@
 import _ from 'lodash';
 
+import starIcon from '../assets/images/star.svg';
+
 const messageBox = document.querySelector('.message-box');
 
 export const hideMessageBox = () => {
@@ -55,7 +57,7 @@ export const renderScores = (scores) => {
         <div class="w-1/2 text-sm md:text-xl font-alfa color-dark">${object.user.toUpperCase()}</div>
         <div class="w-20 score flex items-center justify-center space-x-2 text-center rounded-full">
           <p class="text-sm md:text-lg font-alfa color-dark">${object.score}</p>
-          <img src="./assets/images/star.svg" alt="star icon" class="w-5">
+          <img src="${starIcon}" alt="star icon" class="w-5">
         </div>
       </div>`;
   });
