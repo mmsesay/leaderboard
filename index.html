@@ -17,9 +17,14 @@
     <div class="flex flex-col md:flex-row items-center justify-center mt-14 md:mt-5 w-full md:w-1/2 h-auto md:h-auto md:space-x-10 px-10 md:px-0">
       <div class="scores-panel w-full md:w-3/5">
         <div class="scores-panel-top flex">
-          <h2 class="w-1/2 text-xl md:text-2xl font-bold color-dark font-crete">Recent scores</h2>
+          <div class="w-1/2 text-xl md:text-2xl font-bold color-dark font-crete">Recent scores</div>
           <div class="w-1/2 flex justify-end">
-            <button class="button refresh-button cursor-pointer text-white shadow-2xl cursor-pointer font-crete">Refresh</button>
+            <div class="button refresh-button cursor-pointer text-white shadow-2xl cursor-pointer font-crete">
+              <p class="text-center refresh-button-text md:mt-1">Refresh</p>
+              <div class="mt-1 md:mt-2">
+                <img src="assets/images/spinner.svg" alt="spinner" class="w-5 h-5 mx-auto hide">
+              </div>
+            </div>
           </div>
         </div>
         <div class="scores-panel-bottom flex flex-col md:mt-10">
@@ -47,18 +52,24 @@
           </div>
         </div>
       </div>
-      <div class="form-panel w-full md:w-2/5 mb-12 md:mb-0 md:-mt-52 primary-color rounded-lg">
+      <div class="form-panel w-full md:w-2/5 mb-12 md:mb-0 md:max-h-96 primary-color rounded-lg shadow-2xl">
         <form class="flex items-center flex-col px-5 md:px-12 py-5" method="POST">
           <h2 class="text-center text-xl md:text-2xl color-dark font-bold font-crete">Add your score</h2>
           <p class="text-center message-box"></p>
           <input type="text" name="name" placeholder="Your name" class="mt-5 p-2 w-full rounded-md font-crete name-field">
           <input type="text" name="score" placeholder="Your score" class="mt-5 p-2 w-full rounded-md font-crete score-field">
           <div class="button-container w-full mt-5 flex justify-end">
-            <button class="button submit-button cursor-pointer text-white shadow-lg cursor-pointer font-crete">Submit</button>
+            <div class="button submit-button cursor-pointer text-white shadow-lg cursor-pointer font-crete">
+              <p class="text-center submit-button-text md:mt-1">Submit</p>
+              <div class="mt-1 md:mt-2">
+                <img src="assets/images/spinner.svg" alt="spinner" class="w-5 h-5 mx-auto hide">
+              </div>
+            </div>
           </div>
         </form>
       </div>
     </div>
   </main>
 </body>
+<!-- <script src="./bundle.js"></script> -->
 </html>
