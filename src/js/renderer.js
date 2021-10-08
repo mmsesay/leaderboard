@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import { fetcher } from './fetcher.js';
 
 const messageBox = document.querySelector('.message-box');
 
@@ -43,6 +44,8 @@ export const renderScores = (scores) => {
   const spinner = refreshButton.childNodes[3].childNodes[1];
   let winner;
 
+  const res = fetcher.getCurrentStatus();
+  console.log(res);
   if (scores) {
     scores.forEach((object) => {
       Math.max(object.score);

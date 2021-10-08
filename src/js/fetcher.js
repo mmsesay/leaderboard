@@ -6,6 +6,7 @@ class Fetcher {
     this.baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
     this.gameId = JSON.parse(localStorage.getItem('gameId') || null);
     this.createGame('Space Shooter');
+    this.isResponseCompleted = false;
   }
 
   createGame = async (gameName) => {
@@ -19,6 +20,7 @@ class Fetcher {
           localStorage.setItem('gameId', JSON.stringify(this.gameId));
         })
         .catch((error) => {
+          this.isResponseCompleted = false;
           throw new Error(error);
         });
     }
@@ -33,7 +35,9 @@ class Fetcher {
       .then((response) => {
         const { result } = response.data;
         showMessageBox(result, 'success');
+        this.isResponseCompleted = true;
       }).catch((error) => {
+        this.isResponseCompleted = false;
         throw new Error(error);
       });
   }
@@ -43,10 +47,14 @@ class Fetcher {
       .then((response) => {
         const { result } = response.data;
         renderScores(result);
+        this.isResponseCompleted = true;
       }).catch((error) => {
+        this.isResponseCompleted = false;
         throw new Error(error);
       });
   }
+
+  getCurrentStatus = () => this.isResponseCompleted;
 }
 
 export const fetcher = new Fetcher();
