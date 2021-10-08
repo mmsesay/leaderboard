@@ -92,7 +92,7 @@ main {
 }
 
 .message-box {
-  margin: 3% 15% 0 15%;
+  margin: 3% 0 0 0;
   padding: 2%;
   border-radius: 5px;
   display: block;
@@ -113,6 +113,14 @@ main {
 .winner-name {
   left: 30%;
   top: 73%;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 @media (min-width: 768px) {
@@ -136,5 +144,10 @@ main {
   .winner-name {
     left: 21%;
     top: 73%;
+  }
+
+  .form-panel {
+    margin-top: -14%;
+    height: 350px;
   }
 }
