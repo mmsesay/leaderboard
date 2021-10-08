@@ -13,9 +13,9 @@
 <script defer src="bundel.js"></script></head>
 <body>
   <main class="flex flex-col items-center justify-center md:h-screen">
-    <h1 class="title text-center md:text-left text-3xl md:text-5xl mt-14 md:mt-0 md:mb-10 font-bold color-dark font-alfa">Leaderboard</h1>
-    <div class="flex flex-col md:flex-row items-center justify-center mt-14 md:mt-5 w-full md:w-1/2 h-auto md:h-auto md:space-x-10 px-10 md:px-0">
-      <div class="scores-panel w-full md:w-3/5">
+    <h1 class="title md:text-center lg:text-left text-3xl md:text-5xl mt-14 md:mt-0 md:mb-10 font-bold color-dark font-alfa">Leaderboard</h1>
+    <div class="flex flex-col md:flex-row items-center justify-center mt-14 md:mt-5 w-full md:px-10 lg:px-96 h-auto md:h-auto md:space-x-10 px-10 md:px-0">
+      <div class="scores-panel w-full md:w-3/5 lg:w-3/5">
         <div class="scores-panel-top flex">
           <div class="w-1/2 text-xl md:text-2xl font-bold color-dark font-crete">Recent scores</div>
           <div class="w-1/2 flex justify-end">
@@ -28,32 +28,26 @@
           </div>
         </div>
         <div class="scores-panel-bottom flex flex-col md:mt-10">
-          <div class="icons flex items-center justify-center 
+          <div class="icons flex items-center justify-center
                       mt-5 h-32 md:h-40 w-full rounded-tl-lg rounded-tr-lg primary-color shadow-2xl">
-            <div class="w-1/2 flex justify-center relative">
+            <div class="w-1/2 flex justify-center h-32">
               <img src="assets/images/user.svg" alt="user icon" class="w-3/4 md:w-40">
-              <div class="mt-20 md:mt-32 w-full">
+              <div class="flex justify-center w-48 relative">
                 <p class="absolute text-xs md:text-lg text-center font-crete text-white winner-name"></p>
               </div>
             </div>
-            <div class="w-1/2 flex justify-center"><img src="assets/images/number.svg" alt="number icon" class="w-20 md:w-28"></div>
+            <div class="w-1/2 flex justify-center">
+              <img src="assets/images/number.svg" alt="number icon" class="w-20 md:w-28">
+            </div>
             <div class="absolute -mt-32 md:-mt-40">
               <img src="assets/images/crown.svg" alt="crown icon" class="w-14 md:w-20">
             </div>
           </div>
-          <div class="w-full mt-48 score-board rounded-bl-lg rounded-br-lg primary-color shadow-2xl">
-            <div class="flex items-center justify-center p-2 m-4 rounded-lg bg-white md:mx-32">
-              <div class="w-1/2 text-sm md:text-xl font-alfa color-dark">TOM</div>
-              <div class="w-20 score flex items-center justify-center space-x-2 text-center rounded-full">
-                <p class="text-sm md:text-lg font-alfa color-dark">13</p>
-                <img src="assets/images/star.svg" alt="star icon" class="w-5">
-              </div>
-            </div>
-          </div>
+          <div class="w-full mt-48 score-board rounded-bl-lg rounded-br-lg primary-color shadow-2xl"></div>
         </div>
       </div>
-      <div class="form-panel w-full md:w-2/5 mb-12 md:mb-0 md:max-h-96 primary-color rounded-lg shadow-2xl">
-        <form class="flex items-center flex-col px-5 md:px-12 py-5" method="POST">
+      <div class="form-panel w-full md:w-2/5 lg:w-2/5 mb-12 md:mb-0 md:max-h-96 lg:max-h-96 md:-mt-32 lg:-mt-32 primary-color rounded-lg shadow-2xl">
+        <form class="flex items-center flex-col px-5 md:px-5 lg:px-12 py-5" method="POST">
           <h2 class="text-center text-xl md:text-2xl color-dark font-bold font-crete">Add your score</h2>
           <p class="text-center message-box"></p>
           <input type="text" name="name" placeholder="Your name" class="mt-5 p-2 w-full rounded-md font-crete name-field">

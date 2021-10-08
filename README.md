@@ -2,13 +2,16 @@
 
 > The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external [Leaderboard API service.](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3)
 
-Leaderboard Brief Demo                                                                               |
-:---------------------------------------------------------------------------------------------------:|
-![](./assets/leaderboard-v1.gif)                                                                     |
+Leaderboard Brief Demo                                                                                                    |
+:------------------------------------------------------------------------------------------------------------------------:|
+![](./src/assets/images/leaderboard.gif)                                                                                  |
 
-Leaderboard List Structure                                                                           |
-:---------------------------------------------------------------------------------------------------:|
-![](./assets/leaderboard-v1.png)                                                                     |
+Mobile View 1                           | Mobile View 2                          | Mobile View 3                          |
+:--------------------------------------:|:--------------------------------------:|:--------------------------------------:|
+![](./src/assets/images/mobile-v1.png)  | ![](./src/assets/images/mobile-v2.png) | ![](./src/assets/images/mobile-v3.png) |
+
+## Online version
+[Live Demo](https://mmsesay.github.io/leaderboard/)
 
 ## Built With
 
@@ -41,7 +44,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 - microverseinc for the readme template
 - [Leaderboard API service.](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3)
-- [Rodion Kutsaiev](https://www.pexels.com/photo/yellow-and-white-3-d-cube-9436715/) Pexels.com
+- [Rodion Kutsaiev](https://www.pexels.com/photo/yellow-and-white-3-d-cube-9436715/) at Pexels.com for the background image
 
 ## 📝 License
 

@@ -111,8 +111,9 @@ main {
 }
 
 .winner-name {
-  left: 30%;
-  top: 73%;
+  left: -6rem;
+  top: 5.5rem;
+  width: 83px;
 }
 
 .hide {
@@ -123,13 +124,41 @@ main {
   display: block;
 }
 
+@media (min-width: 400px) {
+  .winner-name {
+    left: -6.3rem;
+    top: 5.8rem;
+    width: 83px;
+  }
+}
+
+@media (min-width: 500px) {
+  .winner-name {
+    left: -7.9rem;
+    top: 5.8rem;
+    width: 83px;
+  }
+}
+
 @media (min-width: 768px) {
+  .winner-name {
+    left: -8rem;
+    top: 5.5rem;
+    width: 85px;
+  }
+}
+
+@media (min-width: 895px) {
+  .winner-name {
+    left: -8rem;
+    top: 5.5rem;
+    width: 95px;
+  }
+}
+
+@media (min-width: 992px) {
   ::-webkit-scrollbar {
     width: 8px;
-  }
-
-  .title {
-    margin-left: -34%;
   }
 
   .score-board {
@@ -142,12 +171,12 @@ main {
   }
 
   .winner-name {
-    left: 21%;
-    top: 73%;
+    left: -8rem;
+    top: 5.5rem;
+    width: 95px;
   }
 
   .form-panel {
-    margin-top: -14%;
     height: 350px;
   }
 }
