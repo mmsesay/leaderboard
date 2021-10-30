@@ -53,9 +53,9 @@ export const renderScores = (scores) => {
     }
 
     scoreBoard.innerHTML += `
-      <div class="flex items-center justify-center p-2 m-4 rounded-lg bg-white md:mx-10 lg:mx-40">
+      <div class="flex items-center justify-center p-2 m-4 rounded-lg bg-white md:mx-10 lg:mx-20">
         <div class="w-1/2 text-sm md:text-xl font-alfa color-dark">${object.user.toUpperCase()}</div>
-        <div class="w-20 score flex items-center justify-center space-x-2 text-center rounded-full">
+        <div class="w-auto score flex items-center justify-center space-x-2 text-center rounded-full px-3">
           <p class="text-sm md:text-lg font-alfa color-dark">${object.score}</p>
           <img src="${starIcon}" alt="star icon" class="w-5">
         </div>
